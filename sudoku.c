@@ -65,12 +65,12 @@ List *get_adj_nodes(Node *n) {
             pushBack(lista, aux);
           }
         }
-        return list;
+        return lista;
       }
     }
   }
 
-  return list;
+  return lista;
 }
 
 int is_final(Node *n) { return 0; }
