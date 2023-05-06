@@ -47,7 +47,7 @@ int is_valid(Node *n) {
   int i, j, k;
   // paso a paso columna -> fila -> check por cuadro
 
-
+  // columna
   for (i = 0; i < 9; i++) {
     for (j = 0; j < 9; j++) {
       if (n->sudo[i][j]) {
@@ -58,7 +58,7 @@ int is_valid(Node *n) {
       }
     }
   }
-
+  // fila
   for (j = 0; j < 9; j++) {
     for (i = 0; i < 9; i++) {
       if (n->sudo[i][j]) {
@@ -70,7 +70,7 @@ int is_valid(Node *n) {
     }
   }
 
-
+  // cuadro
   for (i = 0; i < 9; i++) {
     int val[10] = {0};
     for (j = 0; j < 9; j++) {
@@ -78,6 +78,8 @@ int is_valid(Node *n) {
       int sJ = 3 * (i % 3) + (j % 3);
       if (val[n->sudo[sI][sJ]] != 0)
         return 0;
+      if (val[n->sudo[sI][sJ]] == 0 && n->sudo[sI][sJ] != 1)
+        val[n->sudo[sI][sJ]] = 0;
     }
   }
 
