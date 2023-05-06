@@ -114,7 +114,7 @@ List *get_adj_nodes(Node *n) {
 
   return lista;
 }
-
+// falta esto xd
 int is_final(Node *n) { return 0; }
 
 Node *DFS(Node *initial, int *cont) { return NULL; }
