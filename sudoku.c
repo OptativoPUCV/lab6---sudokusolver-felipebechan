@@ -70,7 +70,7 @@ int is_valid(Node *n) {
     }
   }
 
-  // cuadro
+  // cuadrooo
   for (i = 0; i < 9; i++) {
     int val[10] = {0};
     for (j = 0; j < 9; j++) {
