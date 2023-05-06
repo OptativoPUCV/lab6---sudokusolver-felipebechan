@@ -63,7 +63,8 @@ int is_valid(Node *n) {
     for (i = 0; i < 9; i++) {
       if (n->sudo[i][j]) {
         for (k = i + 1; k < 9; k++) {
-         
+          if (n->sudo[k][j] == n->sudo[i][j]){
+            return 0;}
         }
       }
     }
