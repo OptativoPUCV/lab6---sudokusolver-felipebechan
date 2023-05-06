@@ -78,8 +78,8 @@ int is_valid(Node *n) {
       int sJ = 3 * (i % 3) + (j % 3);
       if (val[n->sudo[sI][sJ]] != 0)
         return 0;
-      if (val[n->sudo[sI][sJ]] == 0 && n->sudo[sI][sJ] != 1)
-        val[n->sudo[sI][sJ]] = 0;
+      if (val[n->sudo[sI][sJ]] == 0 && n->sudo[sI][sJ] != 0)
+        val[n->sudo[sI][sJ]] = 1;
     }
   }
 
