@@ -71,6 +71,15 @@ int is_valid(Node *n) {
   }
 
   // cuadro
+  for (i = 0; i < 9; i++) {
+    int val[10] = {0};
+    for (j = 0; j < 9; j++) {
+      int sI = 3 * (i / 3) + (j / 3);
+      int sJ = 3 * (i % 3) + (j % 3);
+      if (val[n->sudo[sI][sJ]] != 0)
+        return 0;
+    }
+  }
 
   return 1;
 }
