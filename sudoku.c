@@ -47,7 +47,7 @@ int is_valid(Node *n) {
   int i, j, k;
   // paso a paso columna -> fila -> check por cuadro
 
-  // columna
+  // columna done
   for (i = 0; i < 9; i++) {
     for (j = 0; j < 9; j++) {
       if (n->sudo[i][j]) {
