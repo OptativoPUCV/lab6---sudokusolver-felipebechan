@@ -43,6 +43,7 @@ void print_node(Node *n) {
 }
 
 int is_valid(Node *n) {
+  //se definen variables para loop
   int i, j, k;
   // paso a paso columna -> fila -> check por cuadro
 
@@ -58,6 +59,15 @@ int is_valid(Node *n) {
     }
   }
   // fila
+  for (j = 0; j < 9; j++) {
+    for (i = 0; i < 9; i++) {
+      if (n->sudo[i][j]) {
+        for (k = i + 1; k < 9; k++) {
+         
+        }
+      }
+    }
+  }
 
   // cuadro
 
