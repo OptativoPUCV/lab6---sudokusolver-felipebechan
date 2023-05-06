@@ -58,7 +58,7 @@ int is_valid(Node *n) {
       }
     }
   }
-  // fila
+  // fila done
   for (j = 0; j < 9; j++) {
     for (i = 0; i < 9; i++) {
       if (n->sudo[i][j]) {
